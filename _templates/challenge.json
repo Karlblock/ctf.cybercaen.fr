@@ -1,0 +1,10 @@
+{
+  "name": "Nom du challenge",
+  "category": "crypto|linux|web|forensics|reverse|misc",
+  "difficulty": "easy|medium|hard",
+  "points": 50,
+  "author": "VotrePseudo",
+  "description": "Description courte du challenge",
+  "hint": "Un indice optionnel",
+  "flag": "FLAG{example_flag}"
+}
