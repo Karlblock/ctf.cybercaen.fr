@@ -41,9 +41,32 @@ categorie/nom-challenge/
   "hint": "Un indice pour aider",
   "cipher_text": "Texte ou enigme a resoudre",
   "has_terminal": false,
+  "has_web": false,
+  "open_tab": true,
   "author": "pseudo"
 }
 ```
+
+### Options des challenges
+
+| Champ | Type | Description |
+|-------|------|-------------|
+| `has_terminal` | bool | Challenge avec terminal interactif (ttyd) |
+| `has_web` | bool | Challenge web avec container Docker |
+| `open_tab` | bool | `true` = ouvre un onglet, `false` = affiche l'URL dans le challenge |
+
+**Note** : Les containers ont une duree de vie de **30 minutes** et sont automatiquement arretes lorsque le flag est valide.
+
+### Types de challenges Docker
+
+**Terminal** (`has_terminal: true`) :
+- Utilise un `Dockerfile`
+- Le joueur interagit via un terminal dans le navigateur
+
+**Web** (`has_web: true`) :
+- Utilise un `docker-compose.yml`
+- Le joueur accede a une URL (API, site web, etc.)
+- Si `open_tab: false`, l'URL s'affiche dans le challenge (utile pour les API a tester avec curl/Burp)
 
 ## Contribuer
 
